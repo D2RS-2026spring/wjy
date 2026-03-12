@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "📚 学习笔记",
+    "section": "",
+    "text": "这是我学习 Quarto 技术的笔记页面，记录各种功能的使用方法与示例。"
+  },
+  {
+    "objectID": "notes.html#什么是-quarto",
+    "href": "notes.html#什么是-quarto",
+    "title": "📚 学习笔记",
+    "section": "1. 什么是 Quarto？",
+    "text": "1. 什么是 Quarto？\nQuarto 是一个开源的科学与技术出版系统，可以用来创建：\n\n📄 文档：HTML、PDF、Word 格式\n🌐 网站：个人博客、文档站点\n📊 演示文稿：Reveal.js、Beamer\n📚 书籍：在线书籍、教材\n\nQuarto 支持 R、Python、Julia 等多种编程语言，非常适合数据分析和科学写作。"
+  },
+  {
+    "objectID": "notes.html#markdown-基础语法",
+    "href": "notes.html#markdown-基础语法",
+    "title": "📚 学习笔记",
+    "section": "2. Markdown 基础语法",
+    "text": "2. Markdown 基础语法\nQuarto 基于 Markdown 语法，以下是常用的 Markdown 写法：\n\n2.1 文字格式\n**粗体文字**\n*斜体文字*\n~~删除线~~\n`代码片段`\n效果展示：粗体文字、斜体文字、删除线、代码片段\n\n\n2.2 标题层级\n# 一级标题\n## 二级标题\n### 三级标题\n#### 四级标题\n\n\n2.3 列表\n无序列表：\n- 项目一\n- 项目二\n  - 子项目\n有序列表：\n1. 第一步\n2. 第二步\n3. 第三步\n\n\n2.4 链接与图片\n[链接文字](https://example.com)\n![图片描述](图片路径)"
+  },
+  {
+    "objectID": "notes.html#quarto-特色功能",
+    "href": "notes.html#quarto-特色功能",
+    "title": "📚 学习笔记",
+    "section": "3. Quarto 特色功能",
+    "text": "3. Quarto 特色功能\n\n3.1 Callout 提示块\nQuarto 提供了多种样式的提示块，非常实用：\n\n\n\n\n\n\n注记笔记（Note）\n\n\n\n这是一个普通的笔记提示块，用蓝色标注。\n\n\n\n\n\n\n\n\n提示技巧（Tip）\n\n\n\n这是一个技巧提示块，用绿色标注，适合分享小贴士。\n\n\n\n\n\n\n\n\n警告警告（Warning）\n\n\n\n这是一个警告提示块，用黄色标注，提醒注意事项。\n\n\n\n\n\n\n\n\n重要重要（Important）\n\n\n\n这是一个重要提示块，用红色标注，标记关键信息。\n\n\n代码写法：\n::: {.callout-tip}\n## 标题\n内容...\n:::\n\n\n\n3.2 选项卡（Tabset）\n选项卡可以将相关内容整理得更加整洁：\n\n🐍 Python📊 R 语言📝 Markdown\n\n\n# Python 示例代码\nname = \"王嘉仪\"\nprint(f\"你好，我是 {name}！\")\n\n# 计算 BMI 示例\nweight = 55  # 体重 kg\nheight = 1.65  # 身高 m\nbmi = weight / (height ** 2)\nprint(f\"BMI 值为：{bmi:.2f}\")\n\n\n# R 语言示例代码\nname &lt;- \"王嘉仪\"\ncat(paste(\"你好，我是\", name, \"！\\n\"))\n\n# 创建简单向量\nscores &lt;- c(85, 90, 78, 92, 88)\ncat(\"平均分：\", mean(scores), \"\\n\")\ncat(\"最高分：\", max(scores), \"\\n\")\n\n\n# 这是 Markdown\n\nQuarto 文档使用 `.qmd` 扩展名，\n结合了 Markdown 与代码执行能力。\n\n**特点：**\n- 简洁的语法\n- 支持多种输出格式\n- 可执行代码块\n\n\n\n\n\n\n3.3 网格布局（Grid Layout）\nQuarto 内置 CSS Grid 布局系统，可以轻松创建多列布局：\n::: {.grid}\n::: {.g-col-6}\n左侧内容（占 6/12 列）\n:::\n::: {.g-col-6}\n右侧内容（占 6/12 列）\n:::\n:::\n常用列宽： - .g-col-12：全宽（100%） - .g-col-6：半宽（50%） - .g-col-4：三分之一（33%） - .g-col-3：四分之一（25%） - .g-col-md-6：在中等及以上屏幕占半宽（响应式）\n\n\n\n3.4 表格\nMarkdown 表格语法：\n| 列1 | 列2 | 列3 |\n|-----|-----|-----|\n| 内容1 | 内容2 | 内容3 |\n| 内容4 | 内容5 | 内容6 |\n效果：\n\n\n\n证书名称\n级别\n状态\n\n\n\n\n大学英语四级\nCET-4\n✅ 已通过\n\n\n大学英语六级\nCET-6\n✅ 已通过\n\n\n计算机等级考试\n二级\n✅ 已通过\n\n\n普通话水平测试\n二级乙等\n✅ 已获得"
+  },
+  {
+    "objectID": "notes.html#yaml-前置配置",
+    "href": "notes.html#yaml-前置配置",
+    "title": "📚 学习笔记",
+    "section": "4. YAML 前置配置",
+    "text": "4. YAML 前置配置\n每个 .qmd 文件开头都有 YAML 前置配置（Front Matter），用 --- 包裹：\n---\ntitle: \"页面标题\"\nauthor: \"作者姓名\"\ndate: \"2024-01-01\"\ntoc: true          # 显示目录\ntoc-title: \"目录\"  # 目录标题\nformat: html       # 输出格式\n---"
+  },
+  {
+    "objectID": "notes.html#网站配置_quarto.yml",
+    "href": "notes.html#网站配置_quarto.yml",
+    "title": "📚 学习笔记",
+    "section": "5. 网站配置（_quarto.yml）",
+    "text": "5. 网站配置（_quarto.yml）\n_quarto.yml 是整个 Quarto 网站的配置文件：\nproject:\n  type: website       # 项目类型为网站\n\nwebsite:\n  title: \"网站标题\"   # 浏览器标签标题\n  navbar:             # 导航栏配置\n    left:\n      - href: index.qmd\n        text: 首页\n      - about.qmd\n\nformat:\n  html:\n    theme: cosmo      # 主题（Bootstrap 主题）\n    css: styles.css   # 自定义样式文件\n    toc: true         # 全局启用目录"
+  },
+  {
+    "objectID": "notes.html#常用-quarto-命令",
+    "href": "notes.html#常用-quarto-命令",
+    "title": "📚 学习笔记",
+    "section": "6. 常用 Quarto 命令",
+    "text": "6. 常用 Quarto 命令\n在终端中使用以下命令来操作 Quarto 项目：\n\n\n\n命令\n功能\n\n\n\n\nquarto preview\n预览网站（本地实时预览）\n\n\nquarto render\n渲染/编译整个项目\n\n\nquarto publish\n发布网站\n\n\nquarto create\n创建新项目\n\n\nquarto check\n检查 Quarto 安装状态\n\n\n\n\n\n\n\n\n\n提示💡 学习建议\n\n\n\n建议按以下顺序学习 Quarto：\n\n入门：先学习 Markdown 基础语法\n进阶：学习 Quarto 特有的 Callout、Tabset 等组件\n实践：动手修改本网站的 .qmd 文件进行练习\n深入：学习代码块执行（R/Python）和数据可视化\n发布：学习将网站发布到 GitHub Pages 或 Quarto Pub\n\n官方文档：https://quarto.org/docs/"
+  },
+  {
+    "objectID": "notes.html#学习资源推荐",
+    "href": "notes.html#学习资源推荐",
+    "title": "📚 学习笔记",
+    "section": "7. 学习资源推荐",
+    "text": "7. 学习资源推荐\n\n\n\n📖 官方文档\n\nQuarto 官网\nQuarto 指南\nQuarto 参考\n\n\n\n\n\n🎥 学习视频\n\nQuarto 官方 YouTube 频道\nB站 Quarto 教程搜索\nR for Data Science（在线书）"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "关于我",
+    "section": "",
+    "text": "🎓\n\n王嘉仪\n环境工程专业\n\n\n\n\n\n项目\n信息\n\n\n\n\n姓名\n王嘉仪\n\n\n民族\n汉族\n\n\n出生年月\n2003年08月16日\n\n\n政治面貌\n共青团员\n\n\n电话\n19310036080\n\n\n邮箱\ntudou816226@163.com\n\n\n毕业院校\n中南林业科技大学\n\n\n专业\n环境工程"
+  },
+  {
+    "objectID": "about.html#基本信息",
+    "href": "about.html#基本信息",
+    "title": "关于我",
+    "section": "",
+    "text": "🎓\n\n王嘉仪\n环境工程专业\n\n\n\n\n\n项目\n信息\n\n\n\n\n姓名\n王嘉仪\n\n\n民族\n汉族\n\n\n出生年月\n2003年08月16日\n\n\n政治面貌\n共青团员\n\n\n电话\n19310036080\n\n\n邮箱\ntudou816226@163.com\n\n\n毕业院校\n中南林业科技大学\n\n\n专业\n环境工程"
+  },
+  {
+    "objectID": "about.html#教育经历",
+    "href": "about.html#教育经历",
+    "title": "关于我",
+    "section": "🎓 教育经历",
+    "text": "🎓 教育经历\n\n\n中南林业科技大学\n环境工程专业 | 在读\n中南林业科技大学是一所以林业、生态学科为特色的高水平大学，位于湖南省长沙市。环境工程专业致力于培养具备扎实理论基础和实践能力的环保工程人才。\n主修课程方向： - 环境污染控制工程 - 水处理工程技术 - 大气污染防治 - 固体废物处理与处置 - 环境监测与评价"
+  },
+  {
+    "objectID": "about.html#技能与证书",
+    "href": "about.html#技能与证书",
+    "title": "关于我",
+    "section": "🏆 技能与证书",
+    "text": "🏆 技能与证书\n\n语言能力\n\n\n\n🇬🇧 大学英语四级（CET-4）\n状态：已通过 ✅\n具有良好的英语听说读写能力，能够浏览英语专业文件及书籍，具备一定的英语沟通交流能力。\n\n\n\n\n🇬🇧 大学英语六级（CET-6）\n状态：已通过 ✅\n在四级基础上进一步提升，能够阅读英语专业文献，具备较强的英语读写能力。\n\n\n\n\n\n\n🗣️ 普通话水平测试\n等级：二级乙等\n具备标准流利的普通话表达能力，能够清晰进行专业交流与表达。\n\n\n\n\n\n\n计算机技能\n\n\n\n💻 全国计算机二级\n状态：已通过 ✅\n通过全国计算机等级考试二级，掌握计算机基础知识及应用技能。\n\n\n\n\n📊 Microsoft Office\n熟练程度：⭐⭐⭐⭐⭐\n熟练运用 Word、Excel、PowerPoint 等 Office 相关软件，能够高效处理文档、数据与演示文稿。\n\n\n\n\n\n\n📐 AutoCAD 制图软件\n熟练程度：⭐⭐⭐⭐⭐\n熟练使用 AutoCAD 进行工程制图，能够绘制专业的工程设计图纸，满足环境工程项目的制图需求。"
+  },
+  {
+    "objectID": "about.html#个人技能雷达",
+    "href": "about.html#个人技能雷达",
+    "title": "关于我",
+    "section": "📌 个人技能雷达",
+    "text": "📌 个人技能雷达\n\n\n\n\n\n\n注记综合能力评估\n\n\n\n以下是我的综合能力自我评估：\n\n🌿 专业知识：扎实的环境工程理论基础，了解污染控制与环境保护技术\n💻 计算机应用：熟练掌握 Office 软件及 AutoCAD，通过计算机二级认证\n🌏 英语能力：CET-4/6 双证在手，具备良好的英文阅读与写作能力\n🗣️ 表达沟通：普通话二级乙等，具备良好的语言表达和沟通协作能力\n📚 学习能力：积极主动，持续学习新技术（如本网站即为自学 Quarto 的实践成果）"
+  },
+  {
+    "objectID": "about.html#联系我",
+    "href": "about.html#联系我",
+    "title": "关于我",
+    "section": "📬 联系我",
+    "text": "📬 联系我\n欢迎通过以下方式与我取得联系：\n\n\n\n\n📱 电话\n19310036080\n\n\n\n\n📧 邮箱\ntudou816226@163.com\n\n\n\n\n🏫 学校\n中南林业科技大学"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "欢迎来到我的个人网站",
+    "section": "",
+    "text": "资源与环境在读生 | 华中农业大学\n热爱探索技术与自然的交汇点，正在用 Quarto 记录我的学习与成长之旅。\n\n了解更多关于我 → 查看学习笔记 →"
+  },
+  {
+    "objectID": "index.html#个人亮点",
+    "href": "index.html#个人亮点",
+    "title": "欢迎来到我的个人网站",
+    "section": "🌟 个人亮点",
+    "text": "🌟 个人亮点\n\n\n\n🌿 环境工程\n就读于华中农业大学资源与环境专业，关注生态与可持续发展，具备专业的工程分析能力。\n\n\n\n\n💻 计算机技能\n通过全国计算机二级考试，熟练使用 Office 套件及 AutoCAD 制图软件，具备良好的数字化工作能力。\n\n\n\n\n🌏 语言能力\n通过大学英语四六级（CET-4/6），普通话二级乙等，具备良好的中英文沟通能力。"
+  },
+  {
+    "objectID": "index.html#技能概览",
+    "href": "index.html#技能概览",
+    "title": "欢迎来到我的个人网站",
+    "section": "📊 技能概览",
+    "text": "📊 技能概览\n\n\n\n专业技能\n\n\n\n技能\n熟练程度\n\n\n\n\nAutoCAD 制图\n⭐⭐⭐⭐⭐\n\n\nMicrosoft Office\n⭐⭐⭐⭐⭐\n\n\n环境工程设计\n⭐⭐⭐⭐\n\n\nPython / 数据分析\n⭐⭐⭐\n\n\n\n\n\n语言能力\n\n\n\n语言/证书\n水平\n\n\n\n\n普通话\n二级乙等\n\n\n英语（CET-4）\n通过 ✅\n\n\n英语（CET-6）\n通过 ✅\n\n\n英语读写\n良好"
+  },
+  {
+    "objectID": "index.html#关于这个网站",
+    "href": "index.html#关于这个网站",
+    "title": "欢迎来到我的个人网站",
+    "section": "🌱 关于这个网站",
+    "text": "🌱 关于这个网站\n这个网站是我用 Quarto 搭建的个人空间，主要用于：\n\n\n\n\n\n\n提示网站功能\n\n\n\n\n📖 记录学习：记录我在环境工程、技术学习中的心得与笔记\n🛠️ 展示作品：展示我的项目成果和技术探索\n🔬 Quarto 练习：通过实际操作学习 Quarto 网站建设技术\n🤝 联系交流：欢迎同学、朋友与我联系交流\n\n\n\n如果你有任何问题或想法，欢迎通过 邮件 联系我！"
+  }
+]

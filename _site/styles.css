@@ -1,0 +1,411 @@
+/* ========================================
+   王嘉仪个人网站 - 自定义样式
+   主色调：绿色系（呼应环境工程专业）
+   ======================================== */
+
+/* ---------- CSS 变量（全局颜色定义） ---------- */
+:root {
+  --primary-green: #2e7d32;
+  --light-green: #4caf50;
+  --pale-green: #e8f5e9;
+  --dark-green: #1b5e20;
+  --accent-teal: #00897b;
+  --text-dark: #212121;
+  --text-muted: #757575;
+  --border-color: #c8e6c9;
+  --card-shadow: 0 2px 12px rgba(46, 125, 50, 0.12);
+  --card-hover-shadow: 0 6px 20px rgba(46, 125, 50, 0.22);
+}
+
+/* ---------- 全局字体与基础样式 ---------- */
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+/* ---------- 导航栏样式 ---------- */
+.navbar {
+  background: linear-gradient(135deg, var(--dark-green), var(--primary-green)) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #a5d6a7 !important;
+  transition: color 0.2s ease;
+}
+
+/* ---------- 首页 Hero Banner ---------- */
+.hero-banner {
+  background: linear-gradient(135deg, var(--pale-green) 0%, #f1f8e9 50%, #e0f2f1 100%);
+  border-radius: 16px;
+  padding: 4rem 3rem;
+  margin: 1rem 0 2.5rem 0;
+  border-left: 5px solid var(--primary-green);
+  box-shadow: var(--card-shadow);
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  color: var(--dark-green);
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- 按钮样式 ---------- */
+.btn-primary {
+  background-color: var(--primary-green) !important;
+  border-color: var(--primary-green) !important;
+  color: #fff !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-green) !important;
+  border-color: var(--dark-green) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent !important;
+  border: 2px solid var(--primary-green) !important;
+  color: var(--primary-green) !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background-color: var(--pale-green) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+/* ---------- 功能特色卡片 ---------- */
+.feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--light-green);
+}
+
+.feature-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-4px);
+}
+
+.feature-card h3 {
+  color: var(--primary-green);
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------- 技能区域 ---------- */
+.skills-section {
+  background: var(--pale-green);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+/* ---------- 关于我页面 ---------- */
+.about-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+}
+
+/* 头像占位符 */
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pale-green), var(--border-color));
+  border: 3px solid var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+/* ---------- 时间线样式 ---------- */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary-green), var(--light-green));
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.timeline-item::before {
+  content: '🎓';
+  position: absolute;
+  left: -2.4rem;
+  top: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.timeline-item h3 {
+  color: var(--dark-green);
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- 证书卡片 ---------- */
+.cert-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--accent-teal);
+  margin-bottom: 1rem;
+}
+
+.cert-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-2px);
+}
+
+.cert-card h4 {
+  color: var(--primary-green);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- 联系方式 ---------- */
+.contact-grid {
+  margin-top: 1rem;
+}
+
+.contact-item {
+  background: var(--pale-green);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.contact-item:hover {
+  background: var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.contact-item a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+/* ---------- 学习笔记资源卡片 ---------- */
+.resource-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  border-top: 4px solid var(--accent-teal);
+  margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+  color: var(--accent-teal);
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------- 表格样式 ---------- */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+table thead th {
+  background-color: var(--primary-green) !important;
+  color: #ffffff !important;
+  border: none;
+  font-weight: 600;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--pale-green);
+}
+
+table tbody tr:hover {
+  background-color: var(--border-color);
+}
+
+/* ---------- 标题样式 ---------- */
+h1, h2, h3 {
+  color: var(--dark-green);
+}
+
+h2 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+}
+
+/* ---------- 链接样式 ---------- */
+a {
+  color: var(--primary-green);
+}
+
+a:hover {
+  color: var(--dark-green);
+}
+
+/* ---------- 代码块样式 ---------- */
+pre {
+  background: #f8fffe;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  border-left: 4px solid var(--light-green);
+}
+
+code {
+  color: var(--accent-teal);
+  background: var(--pale-green);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+pre code {
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+/* ---------- 引用块 ---------- */
+blockquote {
+  border-left: 4px solid var(--light-green);
+  background: var(--pale-green);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- 页脚样式 ---------- */
+.nav-footer {
+  background: var(--pale-green);
+  border-top: 2px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+/* ---------- 目录（TOC）样式 ---------- */
+#toc-title {
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.toc-active-item {
+  color: var(--primary-green) !important;
+  font-weight: 600;
+}
+
+/* ---------- 响应式调整 ---------- */
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    text-align: center;
+  }
+}
+
+/* ---------- 滚动条美化 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pale-green);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}
